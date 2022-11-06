@@ -2,10 +2,31 @@ body{
   display: flex;
   justify-content: center; /*centers items on the line (the x-axis by default)*/
   align-items: center; /*centers items on the cross-axis (y by default)*/
-  
+  background-color: rgb(71, 194, 184);
+
 }
 
 .container{
+  /* display: flex; */
+  /* flex-direction: column; */
   border: black solid 2.5px;
   border-radius: 10px;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  /* padding: 20px 40px; */
+  display: block;
+}
+
+.quote{
+  border: black solid 2.5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  max-width: 80%;
+
+}
+
+.author{
+  border: black solid 2.5px;
+  margin-bottom: 20px;
+
 }
