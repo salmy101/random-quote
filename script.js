@@ -2,21 +2,22 @@ const quoteElement = document.getElementById('quote')
 const quoteBtn = document.getElementById('quoteBtn')
 
 
-
+quoteBtn.addEventListener('click', generateQuote)
 generateQuote()
 
 function generateQuote() {
-  const config = {
-    mode: 'no-cors',
-    headers: {
-      "Content-Type": "application/json",
-    }
-  }
+  // const config = {
+  //   // mode: 'no-cors',
+  //   headers: {
+  //     "Accept": "application/json",
+  //   }
+  // }
 
-  fetch('https://zenquotes.io/api/random', config)
-  .then(res => res.json())
+  fetch('http://api.quotable.io/random')
+  .then(res => 
+    res.json()
+  )
   .then((data) => {
-    console.log(data) 
-    // jokeEl.innerHTML = data.joke
+    quoteElement.innerHTML = data.content
   })
 }
