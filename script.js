@@ -1,4 +1,6 @@
 const quoteElement = document.getElementById('quote')
+const authorElement = document.getElementById('author')
+
 const quoteBtn = document.getElementById('quoteBtn')
 
 
@@ -19,5 +21,7 @@ function generateQuote() {
   )
   .then((data) => {
     quoteElement.innerHTML = data.content
+    authorElement.innerHTML = data.author
+
   })
 }
